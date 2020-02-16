@@ -1,0 +1,40 @@
+$(document).ready(function(){
+  $("#tdee_num , #workday_num, #restday_num, #wkp , #wkc , #wkf , #rtp , #rtc , #rtf").keyup(function(){
+    var tdee_num = $("#tdee_num");
+    var wkp = $("#wkp");
+    var wkc = $("#wkc");
+    var wkf = $("#wkf");
+    var rtp = $("#rtp");
+    var rtc = $("#rtc");
+    var rtf = $("#rtf");
+    var workday_num = tdee_num.val() - 300;
+    var restday_num = tdee_num.val() - 500;
+    var wkpg = workday_num * wkp.val() / 400 ;
+    var wkpc = workday_num * wkp.val() / 100;
+    var wkcg = workday_num * wkc.val() / 400 ;
+    var wkcc = workday_num * wkc.val() / 100;
+    var wkfg = workday_num * wkf.val() / 900 ;
+    var wkfc = workday_num * wkf.val() / 100;
+    var rtpg = restday_num * rtp.val() / 400 ;
+    var rtpc = restday_num * rtp.val() / 100;
+    var rtcg = restday_num * rtc.val() / 400 ;
+    var rtcc = restday_num * rtc.val() / 100;
+    var rtfg = restday_num * rtf.val() / 900 ;
+    var rtfc = restday_num * rtf.val() / 100;
+    
+    $("#workday_num").val(workday_num.toFixed(0));
+    $("#restday_num").val(restday_num.toFixed(0));
+    $("#workday #protein_g").text(wkpg.toFixed(0) + " g");
+    $("#workday #protein_c").text(wkpc.toFixed(0) + " cal");
+    $("#workday #carb_g").text(wkcg.toFixed(0) + " g");
+    $("#workday #carb_c").text(wkcc.toFixed(0) + " cal");
+    $("#workday #fat_g").text(wkfg.toFixed(0) + " g");
+    $("#workday #fat_c").text(wkfc.toFixed(0) + " cal");
+    $("#restday #protein_g").text(rtpg.toFixed(0) + " g");
+    $("#restday #protein_c").text(rtpc.toFixed(0) + " cal");
+    $("#restday #carb_g").text(rtcg.toFixed(0) + " g");
+    $("#restday #carb_c").text(rtcc.toFixed(0) + " cal");
+    $("#restday #fat_g").text(rtfg.toFixed(0) + " g");
+    $("#restday #fat_c").text(rtfc.toFixed(0) + " cal");
+  });
+});

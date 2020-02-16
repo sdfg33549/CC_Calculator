@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 碳循環</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title="碳循環計算器"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container fulid">
+  <h1>碳循環計算器</h1>
+  <div class="inputinfo">
+    <div class="row">
+      <h2>請輸入您的TDEE：
+        <input type="text" id="tdee_num" value="1800"/>Cal.
+      </h2>
+    </div>
+    <p>（不知道TDEE? 到<a href="https://www.peeta.tw/weight-loss/tdee-and-bmr/"> 這裡 </a>查詢怎麼計算）</p>
+  </div>
+  <hr/>
+  <div class="caculate">
+    <div class="container" id="workday">
+      <div class="title"><img src="https://image.flaticon.com/icons/svg/2548/2548533.svg"/>
+        <h3>訓練日：</h3>
+        <input type="text" id="workday_num" value="1500"/>
+        <p>(-300 Cal.)</p>
+      </div>
+      <div class="form">
+        <div class="head">
+          <div class="container">
+            <h5>蛋白質</h5>
+            <div class="row">
+              <input type="text" id="wkp" value="35"/>
+              <p>%</p>
+            </div>
+          </div>
+          <div class="container">
+            <h5>碳水化合物</h5>
+            <div class="row">
+              <input type="text" id="wkc" value="60"/>
+              <p>%</p>
+            </div>
+          </div>
+          <div class="container">
+            <h5>脂肪</h5>
+            <div class="row">
+              <input type="text" id="wkf" value="5"/>
+              <p>%</p>
+            </div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="container">
+            <h3 id="protein_g">131 g</h3>
+            <p id="protein_c">525 Cal</p>
+          </div>
+          <div class="container">
+            <h3 id="carb_g">225 g</h3>
+            <p id="carb_c">900 Cal</p>
+          </div>
+          <div class="container">
+            <h3 id="fat_g">8 g</h3>
+            <p id="fat_c">75 Cal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="restday">
+      <div class="title"><img src="https://image.flaticon.com/icons/svg/2371/2371571.svg"/>
+        <h3>休息日：</h3>
+        <input type="text" id="restday_num" value="1300"/>
+        <p>(-500 Cal.)</p>
+      </div>
+      <div class="form">
+        <div class="head">
+          <div class="container">
+            <h5>蛋白質</h5>
+            <div class="row">
+              <input type="text" id="rtp" value="35"/>
+              <p>%</p>
+            </div>
+          </div>
+          <div class="container">
+            <h5>碳水化合物</h5>
+            <div class="row">
+              <input type="text" id="rtc" value="10"/>
+              <p>%</p>
+            </div>
+          </div>
+          <div class="container">
+            <h5>脂肪</h5>
+            <div class="row">
+              <input type="text" id="rtf" value="55"/>
+              <p>%</p>
+            </div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="container">
+            <h3 id="protein_g">114 g</h3>
+            <p id="protein_c">455 Cal</p>
+          </div>
+          <div class="container">
+            <h3 id="carb_g">33 g</h3>
+            <p id="carb_c">130 Cal</p>
+          </div>
+          <div class="container">
+            <h3 id="fat_g">79 g</h3>
+            <p id="fat_c">715 Cal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p>本網站計算方式章參考自PEETA哥哥的<a href="https://www.peeta.tw/weight-loss/carb-cycling-diet/">碳循環飲食法</a></p>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
