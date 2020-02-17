@@ -76,6 +76,10 @@ h1 {
   }
 }
 
+input{
+  border-radius: 0;
+}
+
 .inputinfo {
   display: flex;
   justify-content: center;
